@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --color-cream: #f7f1ef;
+  --color-green: #1e3a2b;
+  --color-green-soft: #11f323;
+  --color-pink: #ffc2d1;
+  --color-liliac: #b9a6f2;
+  --color-pink-soft: #ffc1d1;
+  --color-butter: #ffd66b;
+  --color-lime: #c9e265;
+  --color-peach: #ffc98b;
+
+  --gap: clamp(16px, 4vw, 56px);
+  --radius: clamp(16px, 2vw, 28px);
+}
+html {
+  font-size: calc(1vw / 14.4);
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16rem;
+}
+.index {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-green);
+  line-height: 1.5;
+}
+h1,
+h2 {
+  font-weight: 700;
+}
+h3 {
+  font-weight: 400;
+}
+svg {
+  display: block;
+}
+
+/* стили для статьи */
+.article_header,
+.article_content {
+  max-width: 1000rem;
+  margin: 0 auto;
+  padding: 64rem 48rem;
+}
+.backLink {
+  color: #5c5c66;
+  padding: 3rem 6rem;
+  font-weight: 600;
+  transition: color ease 0.6s;
+}
+.backLink::before {
+  content: "← ";
+}
+.backLink:hover {
+  color: #0bf532;
+}
+.article_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+  margin: 12rem 0;
+}
+.article_tag {
+  font-size: 13rem;
+  border-radius: 30rem;
+  border: 1rem solid #f4f4f4;
+  padding: 6rem 14rem;
+  color: #5c5c66;
+  background-color: #f4f4f4;
+}
+.article_title {
+  font-size: 64rem;
+  margin: 32rem 0 16rem;
+}
+.article_lead {
+  font-size: 26rem;
+  line-height: 1.3;
+  max-width: 800rem;
+  color: #5c5c66;
+}
+.aloe_img {
+  width: 100%;
+  border-radius: 18rem;
+  max-width: 720rem;
+  display: block;
+  margin: 0 auto;
+}
+img + .article_content-header {
+  margin-top: 128rem;
+}
+.article_content-header {
+  font-size: 32rem;
+  margin: 48rem 0 16rem;
+}
+.article_content-text,
+.article_content-list {
+  line-height: 1.6;
+}
+.article_content-list {
+  list-style-type: square;
+  margin-left: 20rem;
+}
+
+/* стили для заглушки */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 var(--gap);
+  display: flex;
+  width: 100%;
+  height: 82rem;
+  align-items: center;
+  gap: var(--gap);
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  font-weight: 800;
+  font-size: 20rem;
+}
+.logo__icon {
+  width: 30rem;
+  height: 30rem;
+  fill: var(--color-green-soft);
+  transition: transform 0.8s ease-out;
+}
+.header_logo:hover .logo__icon {
+  transform: rotate(180deg) scale(1.1);
+}
