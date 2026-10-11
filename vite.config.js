@@ -9,7 +9,7 @@ const outDir = path.resolve(__dirname, "docs");
 const pages = {
   main: {
     file: "index.html",
-    chunks: ["/javascripts/index.js", "/javascripts/allStyles.js"],
+    chunks: ["/javascript/index.js", "/javascript/allStyles.js"],
   },
 };
 
