@@ -1,4 +1,77 @@
 @import "reset.css";
-@import "fonts.css";
 @import "layout.css";
+@import "animation.css";
 @import "adaptive.css";
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/Nunito-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/Nunito-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/Nunito-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/Nunito-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/Nunito-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.HeroLead,
+.IntroLead {
+  font-family: "Nunito", Arial, sans-serif;
+}
+h1,
+h2 {
+  font-weight: 900;
+}
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+.HeroLead,
+.IntroLead {
+  font-weight: 400;
+}
+
+.SiteHeader .Logo,
+.TableCardTitle,
+.AccentQuote,
+.TipNumber,
+.FooterMoo {
+  font-family: "Nunito", Arial, sans-serif;
+}

@@ -1,0 +1,16 @@
+.ProgressCow {
+  transition: left 0.12s linear;
+}
+
+@media (min-width: 1025px) {
+  .FooterCow img {
+    transition: transform 0.8s ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ProgressCow,
+  .FooterCow img {
+    transition: none;
+  }
+}
