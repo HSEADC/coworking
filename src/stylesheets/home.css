@@ -447,7 +447,7 @@
   cursor: pointer;
 }
 
-/* AI: Claude Sonnet, доработано: доработан background 35% bottom / 1440px. См. ai-log #5 */
+/* AI: Claude Sonnet, доработано: доработан background 35% bottom / 1440px. См. ai-log #8 */
 #tab-who__about:checked ~ .tabs__about .tab-who__about,
 #tab-what__about:checked ~ .tabs__about .tab-what__about,
 #tab-why__about:checked ~ .tabs__about .tab-why__about {
