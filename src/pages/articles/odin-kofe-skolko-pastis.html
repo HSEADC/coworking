@@ -8,17 +8,58 @@
   </head>
   <body class="ArticlePage" id="Top">
     <a class="SkipLink" href="#Intro">К тексту статьи</a>
+    <header class="header">
+      <a href="#" class="header__logo">
+        <img
+          src="../../images/article/CowLogo.svg"
+          alt=""
+          class="header__logo-image"
+        />
+        <span class="header__logo-text">коровкинг</span>
+      </a>
 
-    <div class="SiteHeader PageGrid">
-      <a class="Logo" href="../../index.html"
-        ><img src="../../images/article/CowLogo.svg" alt="" />коровкинг</a
+      <nav class="header__nav">
+        <a
+          href="../articles/odin-kofe-skolko-pastis.html"
+          class="header__link header__link_active"
+          >Статья</a
+        >
+        <a href="../../index.html" class="header__link">О нас</a>
+      </nav>
+
+      <button
+        class="header__burger"
+        type="button"
+        aria-label="Открыть меню"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
       >
-      <div class="HeaderNav">
-        <a href="../../index.html">Главная</a>
-        <a href="../about.html">О нас</a>
+        <img src="../../images/home/burger.svg" alt="" />
+      </button>
+    </header>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Меню">
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <img src="../../images/home/" alt="" />
+      </button>
+      <div class="mobile-menu__links">
+        <a href="../../index.html" class="mobile-menu__link link-white"
+          >О нас</a
+        >
+        <a
+          href="../articles/odin-kofe-skolko-pastis.html"
+          class="mobile-menu__link mobile-menu__link_active"
+          >Статья</a
+        >
       </div>
-    </div>
+    </nav>
     <div>
+      <!-- ИИ: ChatGPT / Codex. Помощь с разметкой и типографикой статьи; -->
+      <!-- Первый экран -->
       <div class="Hero PageGrid">
         <div class="HeroText">
           <p class="EditorLabel">Редакция коровкинга</p>
@@ -51,6 +92,8 @@
         </div>
       </div>
       <div class="ArticleLayout PageGrid">
+        <!-- ИИ: ChatGPT / Codex, журнал D1. Помощь с меню и индикатором чтения. Сложность: связать ссылки с разделами и адаптивным расположением. -->
+        <!-- Меню статьи -->
         <div class="Contents">
           <div class="ContentsMenu">
             <h2>В этой статье</h2>
@@ -72,7 +115,8 @@
             </div>
           </div>
         </div>
-
+        <!-- ИИ: ChatGPT / Codex. Текст статьи подготовлен с помощью ИИ. -->
+        <!-- Текст статьи -->
         <div class="ArticleBody">
           <div class="ArticleSection" id="Intro">
             <h2 class="IntroTitle">Один кофе —<br />сколько посидеть?</h2>
@@ -229,7 +273,11 @@
           </div>
           <div class="Share">
             <p>Понравилось? Расскажите друзьям, муу.</p>
-            <button class="ShareButton" type="button" id="CopyLink">
+            <button
+              class="link-green button__about"
+              type="button"
+              id="CopyLink"
+            >
               Скопировать ссылку
             </button>
             <p class="ShareStatus" id="ShareStatus"></p>
@@ -238,42 +286,68 @@
       </div>
     </div>
 
-    <div class="SiteFooter">
-      <div class="FooterCow">
-        <img src="../../images/article/PeekingCow.svg" alt="" />
-      </div>
-      <div class="FooterTop">
-        <div>
-          <a class="Logo" href="../../index.html"
-            ><img src="../../images/article/CowLogo.svg" alt="" />коровкинг</a
-          >
-          <p>Знаем, где пастись: места<br />для учёбы, работы и встреч.</p>
-        </div>
-        <div class="FooterNav">
-          <a href="../../index.html">Главная</a><a href="../about.html">О нас</a
-          ><a href="#Top">Наверх ↑</a>
-        </div>
-      </div>
-      <div class="FooterContacts">
-        <p class="FooterMoo">Мууууууууу?</p>
+    <footer class="footer">
+      <div class="inner__footer">
+        <div class="top__footer">
+          <div class="brand__footer">
+            <a class="logo__footer" href="#">
+              <img
+                class="logo-image__footer"
+                src="../../images/article/CowLogo.svg"
+                alt=""
+              />
+              коровкинг
+            </a>
+            <p class="text__footer">
+              Знаем, где пастись: места для учёбы, работы и встреч.
+            </p>
+          </div>
 
-        <div class="ContactStickers">
-          <button class="ContactSticker TelegramSticker" type="button" disabled>
-            Telegram-канал
-          </button>
-          <button class="ContactSticker MailSticker" type="button" disabled>
-            Наша почта
-          </button>
-          <button class="ContactSticker AuthorsSticker" type="button" disabled>
-            Авторы
-          </button>
-          <button class="ContactSticker WriteSticker" type="button" disabled>
-            Напиши нам!
-          </button>
+          <nav class="nav__footer">
+            <div class="column__footer">
+              <p class="nav-title__footer">Навигация</p>
+              <a class="link__footer" href="odin-kofe-skolko-pastis.html"
+                >Статья</a
+              >
+            </div>
+            <div class="column__footer">
+              <p class="nav-title__footer">Проект</p>
+              <a class="link__footer" href="../../index.html">О нас</a>
+              <a class="link__footer" href="../../index.html">Авторы</a>
+            </div>
+          </nav>
         </div>
+
+        <div class="word__footer">
+          <p class="moo__footer">
+            Муууууу<span class="question__footer">?</span>
+          </p>
+          <a
+            class="sticker__footer sticker-channel__footer"
+            href="https://t.me/+OPQD648c7epjYTEy"
+            >канал</a
+          >
+          <a
+            class="sticker__footer sticker-teletype__footer"
+            href="https://teletype.in/@myyyyyy"
+            >Teletype</a
+          >
+          <a
+            class="sticker__footer sticker-authors__footer"
+            href="https://t.me/+OPQD648c7epjYTEy"
+            >авторы</a
+          >
+          <a
+            class="sticker__footer sticker-write__footer"
+            href="https://t.me/+OPQD648c7epjYTEy"
+            >Напиши нам!</a
+          >
+        </div>
+
+        <p class="copyright__footer">© 2026 Коровкинг</p>
       </div>
-      <p class="Copyright">© 2026 Коровкинг</p>
-    </div>
+    </footer>
     <script defer src="../../javascript/article.js"></script>
+    <script defer src="../../javascript/menu.js"></script>
   </body>
 </html>

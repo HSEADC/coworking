@@ -1,3 +1,4 @@
+/* ИИ: ChatGPT / Codex, журнал D1. Помощь с копированием ссылки. Сложность: Clipboard API может быть недоступен или отклонить запрос; тогда выводится подсказка. */
 const CopyButton = document.getElementById("CopyLink");
 const ShareStatus = document.getElementById("ShareStatus");
 
@@ -16,6 +17,7 @@ CopyButton.addEventListener("click", function () {
     });
 });
 
+/* ИИ: ChatGPT / Codex, журнал D1. Помощь с прогрессом чтения и активным разделом. Сложность: учитывать высоту статьи и окна, ограничивать прогресс диапазоном 0–1. */
 const Article = document.querySelector(".ArticleBody");
 const ProgressCow = document.getElementById("ProgressCow");
 const ArticleSections = Article.querySelectorAll(".ArticleSection");
@@ -57,8 +59,8 @@ window.addEventListener("resize", UpdateReadingProgress);
 window.addEventListener("load", UpdateReadingProgress);
 UpdateReadingProgress();
 
-const Footer = document.querySelector(".SiteFooter");
-
+/* ИИ: ChatGPT / Codex, журнал D1. Помощь с появлением коровки: при входе футера в окно добавляется CowVisible. Сложность: видимость и движение отдельно задаются в CSS. */
+const Footer = document.querySelector(".footer");
 function ShowFooterCow() {
   if (Footer.getBoundingClientRect().top < window.innerHeight) {
     Footer.classList.add("CowVisible");

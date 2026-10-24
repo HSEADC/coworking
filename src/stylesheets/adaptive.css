@@ -1,3 +1,6 @@
+/* ИИ: ChatGPT / Codex. Помощь с медиазапросами по замечаниям Даши. Сложность: сохранить читаемость, перестраивая меню и сетку на узких экранах. */
+/* Очень большие экраны: основная сетка сохраняется. */
+
 @media (max-width: 1440px) {
   .HeroText {
     min-width: 0;
@@ -5,11 +8,17 @@
   .ArticleImage {
     max-width: 100%;
   }
+  .FooterMoo {
+    font-size: 160px;
+  }
 }
+
+/* Десктопы и небольшие ноутбуки. */
+
 @media (max-width: 1024px) {
   .PageGrid {
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: var(--page-padding-tablet, 32px);
+    padding-right: var(--page-padding-tablet, 32px);
   }
   .HeroText {
     grid-column: 1 / 6;
@@ -20,14 +29,12 @@
   .Contents {
     grid-column: 1 / 7;
     position: static;
-    padding: 35px;
+    padding: var(--menu-padding, 35px);
   }
   .Contents .ContentsMenu {
     display: block;
   }
-  .Contents h2 {
-    margin-bottom: 22px;
-  }
+  .Contents h2,
   .Contents a {
     margin-bottom: 22px;
   }
@@ -57,7 +64,7 @@
   .ProgressTrack {
     height: 12px;
     border-radius: 20px;
-    background: #bfcc60;
+    background: var(--color-lime, #bfcc60);
   }
   .ProgressCow {
     width: 48px;
@@ -66,16 +73,25 @@
   .SiteFooter {
     margin-bottom: 115px;
   }
+  .FooterMoo {
+    font-size: 100px;
+  }
+  .ArticlePage h1 {
+    font-size: var(--h1, 50px);
+  }
 }
-@media (max-width: 768px) and (max-width: 1023px) {
+
+/* Планшеты (портрет/альбом) и телефоны обычной ширины. */
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .ArticlePage {
-    font-size: 17px;
+    font-size: var(--small-font-size, 17px);
     line-height: 1.45;
   }
   .PageGrid {
-    padding-left: 20px;
-    padding-right: 20px;
-    gap: 20px;
+    padding-left: var(--page-padding-mobile, 20px);
+    padding-right: var(--page-padding-mobile, 20px);
+    gap: var(--grid-gap, 20px);
   }
   .SiteHeader {
     padding-top: 14px;
@@ -139,9 +155,9 @@
   .Contents {
     position: static;
     min-width: 0;
-    padding: 35px;
+    padding: var(--menu-padding, 35px);
     border-radius: 28px;
-    background: #f8f3ee;
+    background: var(--color-beige, #f8f3ee);
   }
   .Contents .ContentsMenu {
     display: block;
@@ -179,7 +195,7 @@
     margin-top: 24px;
   }
   .Summary li::before {
-    top: 0.725em;
+    top: 12.325px;
   }
   .TableCards {
     flex-direction: column;
@@ -240,11 +256,14 @@
     gap: 16px;
   }
   .FooterMoo {
-    font-size: 16vw;
+    font-size: 160px;
     letter-spacing: -3px;
     margin: 24px 0;
   }
 }
+
+/* Смартфоны (портрет): дополнительная настройка узких экранов. */
+
 @media (max-width: 320px) {
   .PageGrid {
     padding-left: 16px;
@@ -270,12 +289,53 @@
     margin-left: 16px;
     margin-right: 16px;
   }
+  .FooterMoo {
+    font-size: 34px;
+  }
 }
+@media (max-width: 1200px) {
+  .FooterMoo {
+    font-size: 132px;
+  }
+}
+
+@media (max-width: 768px) {
+  .FooterMoo {
+    font-size: 68px;
+  }
+  .ArticlePage {
+    font-size: var(--small-font-size, 17px);
+  }
+  .ArticlePage h1,
+  .ArticleBody h2,
+  .ArticleBody .IntroTitle {
+    font-size: var(--h1-mobile, 32px);
+  }
+  .HeroLead,
+  .IntroLead {
+    font-size: var(--h5, 20px);
+    line-height: var(--description-line-height, 26px);
+  }
+  .ArticleMeta,
+  .EditorLabel,
+  .SmallLabel {
+    font-size: var(--h6, 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .FooterMoo {
+    font-size: 40px;
+  }
+}
+
+/* Коровка только на десктопе */
 @media (min-width: 1025px) {
   .SiteFooter {
     position: relative;
     overflow: visible;
   }
+
   .FooterCow {
     display: block;
     position: absolute;
@@ -283,366 +343,18 @@
     bottom: calc(100% - 28px);
     width: 283px;
     height: 154px;
-    z-index: 2;
     overflow: hidden;
+    z-index: 2;
     pointer-events: none;
   }
+
   .FooterCow img {
     display: block;
     width: 100%;
     transform: translateY(100%);
   }
+
   .SiteFooter.CowVisible .FooterCow img {
     transform: translateY(0);
-  }
-}
-@media (max-width: 768px) and (max-width: 1023px) {
-  .FooterMoo {
-    font-size: 15.5cqw;
-    letter-spacing: 0;
-  }
-  .ContactStickers {
-    position: static;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding-bottom: 24px;
-  }
-  .ContactSticker {
-    position: static;
-    transform: none;
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .Contents .ContentsMenu {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: 0;
-    row-gap: 0;
-  }
-  .Contents .ContentsMenu h2 {
-    grid-column: 1 / 3;
-    margin-bottom: 24px;
-  }
-  .Contents .ContentsMenu a {
-    margin: 0;
-    padding: 12px 28px 12px 0;
-  }
-  .Contents .ContentsMenu a:nth-of-type(1) {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  .Contents .ContentsMenu a:nth-of-type(2) {
-    grid-column: 1;
-    grid-row: 3;
-  }
-  .Contents .ContentsMenu a:nth-of-type(3) {
-    grid-column: 1;
-    grid-row: 4;
-  }
-  .Contents .ContentsMenu a:nth-of-type(4) {
-    grid-column: 2;
-    grid-row: 2;
-  }
-  .Contents .ContentsMenu a:nth-of-type(5) {
-    grid-column: 2;
-    grid-row: 3;
-  }
-  .Contents .ContentsMenu a:nth-of-type(6) {
-    grid-column: 2;
-    grid-row: 4;
-  }
-  .Contents .ContentsMenu a:nth-of-type(n + 4) {
-    border-left: 1px solid #d8d1ca;
-    padding-left: 28px;
-    padding-right: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .Contents .ContentsMenu a::before {
-    display: none;
-  }
-  .Contents .ContentsMenu a.ActiveSection {
-    border-left-color: transparent;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .Contents .ContentsMenu a.ActiveSection:nth-of-type(n + 4) {
-    border-left-color: #d8d1ca;
-  }
-}
-@media (max-width: 1440px) {
-  .HeroText {
-    min-width: 0;
-  }
-  .ArticleImage {
-    max-width: 100%;
-  }
-}
-@media (max-width: 1024px) {
-  .PageGrid {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  .HeroText {
-    grid-column: 1 / 6;
-  }
-  .ArticlePage h1 {
-    font-size: 48px;
-  }
-  .Contents {
-    grid-column: 1 / 7;
-    position: static;
-    padding: 35px;
-  }
-  .Contents .ContentsMenu {
-    display: block;
-  }
-  .Contents h2 {
-    margin-bottom: 22px;
-  }
-  .Contents a {
-    margin-bottom: 22px;
-  }
-  .ArticleBody {
-    grid-column: 1 / 7;
-    padding: 0;
-  }
-  .ArticleBody .IntroTitle {
-    font-size: 42px;
-  }
-  .ArticleBody h2 {
-    font-size: 30px;
-  }
-  .ReadingProgress {
-    position: fixed;
-    left: 32px;
-    right: 32px;
-    bottom: 24px;
-    z-index: 10;
-    margin: 0;
-    padding: 25px 28px;
-    border-radius: 24px;
-    background: #f8f3eecc;
-    border: 1px solid #ffffffb3;
-    box-shadow: 0 2px 12px #35363822;
-  }
-  .ProgressTrack {
-    height: 12px;
-    border-radius: 20px;
-    background: #bfcc60;
-  }
-  .ProgressCow {
-    width: 48px;
-    height: 48px;
-  }
-  .SiteFooter {
-    margin-bottom: 115px;
-  }
-}
-@media (max-width: 768px) and (max-width: 1023px) {
-  .ArticlePage {
-    font-size: 17px;
-    line-height: 1.45;
-  }
-  .PageGrid {
-    padding-left: 20px;
-    padding-right: 20px;
-    gap: 20px;
-  }
-  .SiteHeader {
-    padding-top: 14px;
-    padding-bottom: 14px;
-  }
-  .SiteHeader .Logo {
-    grid-column: 1 / 7;
-    justify-self: center;
-    font-size: 23px;
-  }
-  .Logo img {
-    width: 32px;
-    height: 32px;
-  }
-  .HeaderNav {
-    position: static;
-    transform: none;
-    grid-column: 1 / 7;
-    justify-self: center;
-  }
-  .HeaderNav a {
-    min-width: 0;
-    padding: 7px 16px;
-    font-size: 14px;
-  }
-  .Hero {
-    min-height: 0;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-  .HeroText {
-    grid-column: 1 / 7;
-  }
-  .HeroDecoration {
-    display: none;
-  }
-  .ArticlePage h1 {
-    font-size: 36px;
-    letter-spacing: -1px;
-  }
-  .HeroLead {
-    max-width: 100%;
-    font-size: 18px;
-  }
-  .ArticleMeta {
-    gap: 8px;
-    margin-top: 24px;
-    font-size: 12px;
-    flex-wrap: wrap;
-  }
-  .ArticleMeta span {
-    padding: 5px 12px;
-  }
-  .Cover {
-    margin-top: 20px;
-    margin-bottom: 24px;
-  }
-  .ArticleImage {
-    border-radius: 16px;
-  }
-  .Contents {
-    position: static;
-    min-width: 0;
-    padding: 35px;
-    border-radius: 28px;
-    background: #f8f3ee;
-  }
-  .Contents .ContentsMenu {
-    display: block;
-  }
-  .Contents .ContentsMenu h2 {
-    display: block;
-    margin-bottom: 22px;
-    font-size: 24px;
-  }
-  .Contents .ContentsMenu a {
-    margin-bottom: 22px;
-    padding-left: 12px;
-    font-size: 18px;
-    white-space: normal;
-  }
-  .ArticleBody {
-    width: 100%;
-    padding: 0;
-  }
-  .ArticleBody .ArticleSection {
-    scroll-margin-top: 90px;
-    margin-bottom: 36px;
-  }
-  .ArticleBody .IntroTitle {
-    font-size: 34px;
-  }
-  .ArticleBody h2 {
-    font-size: 28px;
-  }
-  .ArticleBody p {
-    margin-bottom: 20px;
-  }
-  .Summary {
-    padding: 20px;
-    margin-top: 24px;
-  }
-  .Summary li::before {
-    top: 0.725em;
-  }
-  .TableCards {
-    flex-direction: column;
-    gap: 12px;
-  }
-  .TableCard {
-    padding: 18px 20px;
-    min-height: 0;
-    font-size: 17px;
-  }
-  .OrderChain {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 46px;
-  }
-  .OrderChain li {
-    min-width: 0;
-    padding: 12px 8px;
-  }
-  .OrderChain li:nth-child(3)::before {
-    display: none;
-  }
-  .ArticleBody .AccentQuote {
-    padding: 24px 20px;
-    font-size: 24px;
-    border-radius: 22px;
-  }
-  .TipsList li {
-    gap: 14px;
-  }
-  .TipsList li > div {
-    min-width: 0;
-  }
-  .TipNumber {
-    width: 44px;
-    height: 44px;
-    font-size: 20px;
-  }
-  .TipsList h3 {
-    font-size: 21px;
-  }
-  .ReadingProgress {
-    left: 20px;
-    right: 20px;
-    bottom: calc(20px + env(safe-area-inset-bottom));
-  }
-  .SiteFooter {
-    margin: 0 20px 115px;
-    padding: 24px 20px;
-    border-radius: 22px;
-  }
-  .FooterTop {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .FooterTop .FooterNav {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .FooterMoo {
-    font-size: 16vw;
-    letter-spacing: -3px;
-    margin: 24px 0;
-  }
-}
-@media (max-width: 320px) {
-  .PageGrid {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .ArticlePage h1 {
-    font-size: 32px;
-  }
-  .ArticleBody .IntroTitle {
-    font-size: 30px;
-  }
-  .ArticleBody h2 {
-    font-size: 26px;
-  }
-  .Summary {
-    padding: 16px;
-  }
-  .ReadingProgress {
-    left: 16px;
-    right: 16px;
-  }
-  .SiteFooter {
-    margin-left: 16px;
-    margin-right: 16px;
   }
 }

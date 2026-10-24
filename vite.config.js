@@ -7,6 +7,10 @@ const root = path.resolve(__dirname, "src");
 const outDir = path.resolve(__dirname, "docs");
 
 const pages = {
+  article: {
+    file: "pages/articles/odin-kofe-skolko-pastis.html",
+    chunks: [],
+  },
   main: {
     file: "index.html",
     chunks: ["/javascript/index.js", "/javascript/allStyles.js"],
@@ -20,7 +24,16 @@ const chunksByFile = Object.fromEntries(
 function pageChunksPlugin() {
   return {
     name: "page-chunks",
-    transformIndexHtml(html, ctx) {
+    transformIndexHtml: {
+      order: "pre",
+      handler(html, ctx) {
+      // При сборке Vite включает JS статьи в готовый сайт.
+      if (!ctx.server) {
+        html = html.replace(
+          '<script defer src="../../javascript/article.js"></script>',
+          '<script type="module" src="../../javascript/article.js"></script>',
+        );
+      }
       const relFile = path
         .relative(root, ctx.filename)
         .split(path.sep)
@@ -36,13 +49,14 @@ function pageChunksPlugin() {
           injectTo: "body",
         })),
       };
+      },
     },
   };
 }
 
 export default defineConfig(({ command }) => ({
   root,
-  base: command === "build" ? "/static-site-09-25/" : "/",
+  base: command === "build" ? "/coworking/" : "/",
   plugins: [pageChunksPlugin()],
   build: {
     outDir,

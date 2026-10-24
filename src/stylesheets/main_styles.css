@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Цвета */
+  --main-green-accent: #c0c960;
+  --main-white-accent: #ffffff;
+  --main-black-accent: #303034;
+  --main-grey-accent: #888888;
+  --main-pink-accent: #fdbfcd;
+
+  --grey-dark-description: #5c5c5c;
+  --grey-light-description: #a1a1a1;
+  --grey-dark: #6a6a6a;
+  --grey-light: #d0d0d0;
+  --grey-light-badge: #4e5058;
+  --grey-text-badge: #bbbbbb;
+  --grey-line: #45464b;
+  --pink-dark: #ac7d88;
+  --pink-text: #b35b73;
+  --green-dark: #6b7126;
+  --beige-card: #f3eae4;
+  --beige-text: #514c3c;
+  --faq-item: #faf7f4;
+  --footer-card: #1d1d1d;
+  --footer-line: #4e4e50;
+  --color-accent: #ff527b;
+  --color-pink-light: #fce3e7;
+  --color-beige: #f8f3ee;
+  --color-secondary-text: #5c5c66;
+  --color-gray-light: #f4f4f4;
+  --color-light: #faf7f5;
+
+  --green-hover: #adb54f;
+  --pink-hover: #f4a8b9;
+  --white-hover: #ebebeb;
+
+  /* Скругления */
+  --radius-round: 100px;
+  --radius-card: 50px;
+  --radius-footer: 36px;
+  --radius-team: 28px;
+  --radius-big: 24px;
+  --radius-faq: 12px;
+  --radius-card: 20px;
+
+  /* Типографика */
+  --font-heading: "Nunito", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --header-font-size: 70px;
+  --h1: 50px;
+  --h1-mobile: 32px;
+  --description-font-size: 24px;
+  --text-font-size: 21px;
+  --h5: 20px;
+  --badge-font-size: 18px;
+  --small-font-size: 17px;
+  --h6: 15px;
+
+  --header-line-height: 1;
+  --title-line-height: 1.1;
+  --description-line-height: 26px;
+  --small-line-height: 22px;
+
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* Сетка и общие отступы */
+  --page-padding: 55px;
+  --page-padding-tablet: 32px;
+  --page-padding-mobile: 20px;
+  --grid-gap: 20px;
+  --section-gap: 48px;
+  --paragraph-gap: 24px;
+  --menu-padding: 35px;
+}
