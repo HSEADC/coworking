@@ -1,0 +1,18 @@
+/* ИИ: ChatGPT / Codex, журнал D1. Плавное движение индикатора чтения; left меняет JavaScript. */
+.ProgressCow {
+  transition: left 0.12s linear;
+}
+
+/* ИИ: ChatGPT / Codex, журнал D1. Переход для коровки только на десктопе. Сложность: transition работает вместе с начальным и конечным transform в article.css. */
+@media (min-width: 1025px) {
+  .FooterCow img {
+    transition: transform 0.8s ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ProgressCow,
+  .FooterCow img {
+    transition: none;
+  }
+}
