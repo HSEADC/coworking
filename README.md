@@ -4,7 +4,7 @@
 
 ## Ссылки
 
-- Сайт: []
+- Сайт: [https://hseadc.github.io/coworking/]
 - Макет в Figma: [https://www.figma.com/design/y6CtpVCP31QpTMqgUpUSLe/2-%D0%BA%D1%83%D1%80%D1%81-%D0%A1%D0%A2%D0%A1?node-id=1046-727&p=f&t=yTVTS6NDR1MIFxAP-0]
 
 ## Скриншоты

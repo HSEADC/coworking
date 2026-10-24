@@ -13,7 +13,12 @@ const pages = {
   },
   main: {
     file: "index.html",
-    chunks: ["/javascript/index.js", "/javascript/allStyles.js"],
+    chunks: [
+      "/javascript/index.js",
+      "/javascript/allStyles.js",
+      "/javascript/menu.js",
+      "/javascript/article.js",
+    ],
   },
 };
 

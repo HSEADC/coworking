@@ -220,6 +220,11 @@
   .header__burger img {
     display: block;
   }
+
+  .soon-title__about {
+    margin: auto 0 0 3px;
+    font-size: 17px;
+  }
 }
 
 @media (min-width: 769px) {
@@ -697,7 +702,7 @@
 
 /* Планшеты (портрет/альбом) и телефоны обычной ширины. */
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .ArticlePage {
     font-size: var(--small-font-size, 17px);
     line-height: 1.45;
