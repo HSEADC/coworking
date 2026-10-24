@@ -9,7 +9,12 @@ const outDir = path.resolve(__dirname, "docs");
 const pages = {
   article: {
     file: "pages/articles/odin-kofe-skolko-pastis.html",
-    chunks: [],
+    chunks: [
+      "/javascript/index.js",
+      "/javascript/allStyles.js",
+      "/javascript/menu.js",
+      "/javascript/article.js",
+    ],
   },
   main: {
     file: "index.html",
