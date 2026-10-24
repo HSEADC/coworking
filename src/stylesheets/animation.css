@@ -1,0 +1,78 @@
+@keyframes up-down {
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* AI: Claude Sonnet, сделано: анимация для карточек См. ai-log #2 */
+@keyframes card-move__about {
+  0%,
+  22% {
+    transform: translate(0, 0) scale(1);
+    z-index: 3;
+  }
+  23% {
+    z-index: 0;
+  }
+  32% {
+    transform: translate(7.9%, -38.5%) scale(0.84);
+    z-index: 0;
+  }
+  33%,
+  55% {
+    transform: translate(7.9%, -38.5%) scale(0.84);
+    z-index: 1;
+  }
+  65%,
+  88% {
+    transform: translate(4%, -21.4%) scale(0.92);
+    z-index: 2;
+  }
+  98%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    z-index: 3;
+  }
+}
+
+@keyframes show-text__about {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes dot-active__about {
+  0%,
+  22%,
+  98%,
+  100% {
+    height: 27px;
+    background-color: var(--main-black-accent);
+  }
+  30%,
+  90% {
+    height: 13px;
+    background-color: var(--main-white-accent);
+  }
+}
+
+/* ----------------м---------------- СТАТЬЯ -------------------------------------- */
+/* ИИ: ChatGPT / Codex, журнал D1. Плавное движение индикатора чтения; left меняет JavaScript. */
+.ProgressCow {
+  transition: left 0.12s linear;
+}
+
+/* ИИ: ChatGPT / Codex, журнал D1. Переход для коровки только на десктопе. Сложность: transition работает вместе с начальным и конечным transform в article.css. */
+@media (min-width: 1025px) {
+  .FooterCow img {
+    transition: transform 0.8s ease-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ProgressCow,
+  .FooterCow img {
+    transition: none;
+  }
+}

@@ -1,0 +1,944 @@
+/* ------------------------- СТРАНИЦА С ЗАГЛУШКОЙ И О НАС ------------------------- */
+/* ------------- БОЛЬШИЕ ЭКРАНЫ ------------- */
+@media (min-width: 1440px) {
+  .hero {
+    background-size: 100% auto;
+  }
+}
+
+@media (min-width: 1600px) {
+  /* AI: Claude Sonnet, доработано: доработан background 35% bottom / 1440px. См. ai-log #1 */
+  .hero {
+    background-size: 1600px auto;
+    background-position: right bottom;
+  }
+}
+
+/* ------------- НОУТБУК ------------- */
+@media (max-width: 1380px) {
+  .cover__read {
+    display: none;
+  }
+}
+
+@media (max-width: 1240px) {
+  .about,
+  .criteria,
+  .team {
+    margin: 50px 24px;
+  }
+
+  /* О нас */
+  .about {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px;
+    border-radius: 40px;
+  }
+
+  .cards-area__about {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .info__about {
+    min-height: auto;
+  }
+
+  .button__about {
+    margin-top: 24px;
+  }
+
+  /* Критерии */
+  .cards__criteria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Команда */
+  .cards__team {
+    gap: 16px;
+  }
+
+  .name__team {
+    font-size: 30px;
+  }
+
+  /* Частые вопросы */
+  .faq {
+    grid-template-columns: 1fr 2fr;
+    padding: 46px 24px 40px;
+  }
+
+  .question__faq {
+    gap: 24px;
+    font-size: 24px;
+  }
+
+  .answer__faq {
+    padding-left: 104px;
+  }
+
+  /* Футер */
+  .footer {
+    padding: 19px 24px 32px;
+  }
+
+  .nav__footer {
+    margin-right: 40px;
+  }
+
+  /* AI: Claude Sonnet, сделан: размер шрифта См. ai-log #4 */
+  .moo__footer {
+    font-size: calc((100vw - 98px) * 0.214);
+  }
+
+  .sticker__footer {
+    padding: 6px 20px;
+    font-size: var(--small-font-size);
+  }
+}
+
+@media (max-width: 1100px) {
+  .info__read {
+    flex: 1;
+    max-width: 330px;
+    margin-left: 48px;
+  }
+}
+
+/* ------------- ПЛАНШЕТ ------------- */
+@media (max-width: 925px) {
+  /* Заглушка */
+  .hero {
+    background: none;
+  }
+
+  .badge__hero {
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  /* Почитать между делом */
+  .title__read,
+  .text__read {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .title__read {
+    font-size: 40px;
+  }
+
+  .text__read {
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  .card__read {
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  .meta__read {
+    width: 100%;
+    margin-top: 24px;
+    margin-left: 0;
+    padding-left: 206px;
+  }
+
+  /* Команда */
+  .cards__team {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 32px;
+  }
+
+  /* AI: Claude Sonnet, доработано: адаптив для карточек См. ai-log #6 */
+  .card__team {
+    flex: 0 1 calc(50% - 8px);
+  }
+
+  .card-masha__team {
+    margin-top: 0;
+  }
+
+  /* Частые вопросы */
+  .faq {
+    grid-template-columns: 1fr;
+    padding: 40px 32px;
+  }
+
+  .list__faq {
+    grid-column: 1;
+    grid-row: auto;
+    margin-top: 32px;
+  }
+
+  .more__faq {
+    align-self: start;
+  }
+
+  /* Футер */
+  .nav__footer {
+    margin-right: 0;
+  }
+
+  .logo__footer {
+    font-size: 26px;
+  }
+
+  .sticker__footer {
+    padding: 5px 14px;
+    font-size: 14px;
+  }
+}
+
+/* ------------- ТЕЛЕФОН ------------- */
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+  }
+
+  .header__logo {
+    position: static;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .header__burger {
+    display: block;
+  }
+
+  .header__burger img {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Заглушка */
+  .hero {
+    padding: 20px;
+  }
+
+  .badge__hero {
+    margin-bottom: 24px;
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  .title__hero {
+    font-size: 40px;
+    line-height: 38px;
+  }
+
+  .title__hero br,
+  .text__hero br {
+    display: none;
+  }
+
+  .text__hero {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 16px 12px;
+  }
+
+  .form-input,
+  .form-button {
+    flex: none;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .links__hero {
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .link__hero {
+    font-size: 19px;
+  }
+
+  .stroke {
+    gap: 8px;
+    margin-top: 27px;
+    margin-left: -9px;
+    font-size: 18px;
+  }
+
+  /* Критерии */
+  .criteria {
+    margin: 24px 12px;
+  }
+
+  .title__criteria {
+    font-size: var(--h1-mobile);
+  }
+
+  .cards__criteria {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card-title__criteria {
+    font-size: 22px;
+  }
+
+  .card-text__criteria {
+    font-size: var(--small-font-size);
+    line-height: 21px;
+  }
+
+  .card-text__criteria br {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  /* О нас */
+  .about {
+    margin: 24px 12px;
+    padding: 16px 12px 12px;
+    border-radius: 28px;
+  }
+
+  .cards-area__about {
+    gap: 8px;
+  }
+
+  .card__about {
+    padding: 9px 0 10px 9px;
+    border-radius: 12px;
+  }
+
+  .card-tags__about {
+    gap: 4px;
+    max-width: 180px;
+  }
+
+  .tag__about {
+    padding: 3px 6px;
+    font-size: 9px;
+  }
+
+  .card-number__about {
+    font-size: 56px;
+  }
+
+  .card-title__about {
+    max-width: 120px;
+    font-size: 11px;
+    line-height: 12px;
+  }
+
+  .card-text__about {
+    max-width: 160px;
+    margin: 6px 0 0 3px;
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .info__about {
+    padding: 16px 14px;
+    border-radius: 20px;
+  }
+
+  .tabs__about {
+    gap: 6px;
+  }
+
+  .tab__about {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+
+  .title__about {
+    margin-top: 18px;
+    font-size: var(--h1-mobile);
+  }
+
+  .text__about {
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
+  }
+
+  .button__about {
+    align-self: stretch;
+    text-align: center;
+    font-size: var(--small-font-size);
+  }
+
+  /* Почитать между делом */
+  .read {
+    padding: 32px 0 40px;
+  }
+
+  .title__read,
+  .text__read {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .title__read {
+    font-size: var(--h1-mobile);
+  }
+
+  .text__read {
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
+  }
+
+  .card__read {
+    flex-direction: column;
+    margin-top: 28px;
+    padding: 20px 16px 28px;
+    border-radius: var(--radius-big);
+  }
+
+  .number__read {
+    width: 120px;
+    height: 100px;
+    margin-left: -35px;
+    font-size: 54px;
+  }
+
+  .info__read {
+    width: 100%;
+    max-width: none;
+    margin: 16px 0 0;
+  }
+
+  .badge__read {
+    padding: 5px 12px;
+    font-size: var(--h6);
+  }
+
+  .tag__read,
+  .time__read,
+  .more__read {
+    font-size: 16px;
+  }
+
+  .tag__read {
+    padding: 6px 16px;
+  }
+
+  .card-title__read {
+    max-width: 240px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .card-text__read {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .button__read {
+    display: block;
+    text-align: center;
+  }
+
+  .meta__read {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  /* Команда */
+  .team {
+    margin: 32px 16px;
+  }
+
+  .title__team {
+    font-size: var(--h1-mobile);
+  }
+
+  .text__team {
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
+  }
+
+  .cards__team {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .card__team {
+    flex-basis: 100%;
+    max-width: 433px;
+  }
+
+  /* Частые вопросы */
+  .faq {
+    padding: 32px 16px;
+  }
+
+  .title__faq {
+    font-size: var(--h1-mobile);
+  }
+
+  .text__faq {
+    font-size: var(--small-font-size);
+    line-height: var(--small-line-height);
+  }
+
+  .list__faq {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .question__faq {
+    gap: 14px;
+    min-height: 64px;
+    padding: 8px 10px 8px 0;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .question__faq::after {
+    width: 32px;
+    height: 32px;
+  }
+
+  .number__faq {
+    width: 58px;
+    height: 48px;
+    padding-right: 6px;
+    font-size: 32px;
+  }
+
+  .answer__faq {
+    padding: 0 16px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .more-title__faq {
+    margin-top: 28px;
+  }
+
+  .button__faq {
+    display: block;
+    padding: 9px 16px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* Футер */
+  .footer {
+    padding: 12px 12px 24px;
+  }
+
+  .inner__footer {
+    padding: 20px 16px 16px;
+    border-radius: var(--radius-big);
+  }
+
+  .top__footer {
+    flex-direction: column;
+  }
+
+  .logo-image__footer {
+    width: 50px;
+    height: 45px;
+  }
+
+  .nav__footer {
+    gap: 40px;
+    margin: 0;
+  }
+
+  .word__footer {
+    margin-top: 12px;
+  }
+
+  /* AI: Claude Sonnet, сделан: размер шрифта См. ai-log #4 */
+  .moo__footer {
+    font-size: calc((100vw - 56px) * 0.214);
+  }
+
+  .sticker__footer {
+    padding: 3px 9px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    font-size: 11px;
+  }
+
+  .sticker-channel__footer {
+    left: 6%;
+    top: 8%;
+  }
+
+  .sticker-teletype__footer {
+    left: 24%;
+    top: 60%;
+  }
+
+  .sticker-authors__footer {
+    left: 50%;
+    top: 8%;
+  }
+
+  .sticker-write__footer {
+    left: auto;
+    right: 0;
+    top: 60%;
+  }
+
+  .copyright__footer {
+    margin: 20px -8px 0;
+    padding: 16px 8px 0;
+    font-size: 15px;
+  }
+}
+
+/* ----------------м---------------- СТАТЬЯ -------------------------------------- */
+/* ИИ: ChatGPT / Codex. Помощь с медиазапросами по замечаниям Даши. Сложность: сохранить читаемость, перестраивая меню и сетку на узких экранах. */
+/* Очень большие экраны: основная сетка сохраняется. */
+
+@media (max-width: 1440px) {
+  .HeroText {
+    min-width: 0;
+  }
+  .ArticleImage {
+    max-width: 100%;
+  }
+  .FooterMoo {
+    font-size: 160px;
+  }
+}
+
+/* Десктопы и небольшие ноутбуки. */
+
+@media (max-width: 1024px) {
+  .PageGrid {
+    padding-left: var(--page-padding-tablet, 32px);
+    padding-right: var(--page-padding-tablet, 32px);
+  }
+  .HeroText {
+    grid-column: 1 / 6;
+  }
+  .ArticlePage h1 {
+    font-size: 48px;
+  }
+  .Contents {
+    grid-column: 1 / 7;
+    position: static;
+    padding: var(--menu-padding, 35px);
+  }
+  .Contents .ContentsMenu {
+    display: block;
+  }
+  .Contents h2,
+  .Contents a {
+    margin-bottom: 22px;
+  }
+  .ArticleBody {
+    grid-column: 1 / 7;
+    padding: 0;
+  }
+  .ArticleBody .IntroTitle {
+    font-size: 42px;
+  }
+  .ArticleBody h2 {
+    font-size: 30px;
+  }
+  .ReadingProgress {
+    position: fixed;
+    left: 32px;
+    right: 32px;
+    bottom: 24px;
+    z-index: 10;
+    margin: 0;
+    padding: 25px 28px;
+    border-radius: 24px;
+    background: #f8f3eecc;
+    border: 1px solid #ffffffb3;
+    box-shadow: 0 2px 12px #35363822;
+  }
+  .ProgressTrack {
+    height: 12px;
+    border-radius: 20px;
+    background: var(--color-lime, #bfcc60);
+  }
+  .ProgressCow {
+    width: 48px;
+    height: 48px;
+  }
+  .SiteFooter {
+    margin-bottom: 115px;
+  }
+  .FooterMoo {
+    font-size: 100px;
+  }
+  .ArticlePage h1 {
+    font-size: var(--h1, 50px);
+  }
+}
+
+/* Планшеты (портрет/альбом) и телефоны обычной ширины. */
+
+@media (max-width: 768px) and (max-width: 1023px) {
+  .ArticlePage {
+    font-size: var(--small-font-size, 17px);
+    line-height: 1.45;
+  }
+  .PageGrid {
+    padding-left: var(--page-padding-mobile, 20px);
+    padding-right: var(--page-padding-mobile, 20px);
+    gap: var(--grid-gap, 20px);
+  }
+  .SiteHeader {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .SiteHeader .Logo {
+    grid-column: 1 / 7;
+    justify-self: center;
+    font-size: 23px;
+  }
+  .Logo img {
+    width: 32px;
+    height: 32px;
+  }
+  .HeaderNav {
+    position: static;
+    transform: none;
+    grid-column: 1 / 7;
+    justify-self: center;
+  }
+  .HeaderNav a {
+    min-width: 0;
+    padding: 7px 16px;
+    font-size: 14px;
+  }
+  .Hero {
+    min-height: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .HeroText {
+    grid-column: 1 / 7;
+  }
+  .HeroDecoration {
+    display: none;
+  }
+  .ArticlePage h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+  .HeroLead {
+    max-width: 100%;
+    font-size: 18px;
+  }
+  .ArticleMeta {
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  .ArticleMeta span {
+    padding: 5px 12px;
+  }
+  .Cover {
+    margin-top: 20px;
+    margin-bottom: 24px;
+  }
+  .ArticleImage {
+    border-radius: 16px;
+  }
+  .Contents {
+    position: static;
+    min-width: 0;
+    padding: var(--menu-padding, 35px);
+    border-radius: 28px;
+    background: var(--color-beige, #f8f3ee);
+  }
+  .Contents .ContentsMenu {
+    display: block;
+  }
+  .Contents .ContentsMenu h2 {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 24px;
+  }
+  .Contents .ContentsMenu a {
+    margin-bottom: 22px;
+    padding-left: 12px;
+    font-size: 18px;
+    white-space: normal;
+  }
+  .ArticleBody {
+    width: 100%;
+    padding: 0;
+  }
+  .ArticleBody .ArticleSection {
+    scroll-margin-top: 90px;
+    margin-bottom: 36px;
+  }
+  .ArticleBody .IntroTitle {
+    font-size: 34px;
+  }
+  .ArticleBody h2 {
+    font-size: 28px;
+  }
+  .ArticleBody p {
+    margin-bottom: 20px;
+  }
+  .Summary {
+    padding: 20px;
+    margin-top: 24px;
+  }
+  .Summary li::before {
+    top: 12.325px;
+  }
+  .TableCards {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .TableCard {
+    padding: 18px 20px;
+    min-height: 0;
+    font-size: 17px;
+  }
+  .OrderChain {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 46px;
+  }
+  .OrderChain li {
+    min-width: 0;
+    padding: 12px 8px;
+  }
+  .OrderChain li:nth-child(3)::before {
+    display: none;
+  }
+  .ArticleBody .AccentQuote {
+    padding: 24px 20px;
+    font-size: 24px;
+    border-radius: 22px;
+  }
+  .TipsList li {
+    gap: 14px;
+  }
+  .TipsList li > div {
+    min-width: 0;
+  }
+  .TipNumber {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+  .TipsList h3 {
+    font-size: 21px;
+  }
+  .ReadingProgress {
+    left: 20px;
+    right: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom));
+  }
+  .SiteFooter {
+    margin: 0 20px 115px;
+    padding: 24px 20px;
+    border-radius: 22px;
+  }
+  .FooterTop {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .FooterTop .FooterNav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .FooterMoo {
+    font-size: 160px;
+    letter-spacing: -3px;
+    margin: 24px 0;
+  }
+}
+
+/* Смартфоны (портрет): дополнительная настройка узких экранов. */
+
+@media (max-width: 320px) {
+  .PageGrid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .ArticlePage h1 {
+    font-size: 32px;
+  }
+  .ArticleBody .IntroTitle {
+    font-size: 30px;
+  }
+  .ArticleBody h2 {
+    font-size: 26px;
+  }
+  .Summary {
+    padding: 16px;
+  }
+  .ReadingProgress {
+    left: 16px;
+    right: 16px;
+  }
+  .SiteFooter {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .FooterMoo {
+    font-size: 34px;
+  }
+}
+@media (max-width: 1200px) {
+  .FooterMoo {
+    font-size: 132px;
+  }
+}
+
+@media (max-width: 768px) {
+  .FooterMoo {
+    font-size: 68px;
+  }
+  .ArticlePage {
+    font-size: var(--small-font-size, 17px);
+  }
+  .ArticlePage h1,
+  .ArticleBody h2,
+  .ArticleBody .IntroTitle {
+    font-size: var(--h1-mobile, 32px);
+  }
+  .HeroLead,
+  .IntroLead {
+    font-size: var(--h5, 20px);
+    line-height: var(--description-line-height, 26px);
+  }
+  .ArticleMeta,
+  .EditorLabel,
+  .SmallLabel {
+    font-size: var(--h6, 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .FooterMoo {
+    font-size: 40px;
+  }
+}
