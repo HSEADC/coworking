@@ -60,8 +60,9 @@ window.addEventListener("load", UpdateReadingProgress);
 UpdateReadingProgress();
 
 /* ИИ: ChatGPT / Codex, журнал D1. Помощь с появлением коровки: при входе футера в окно добавляется CowVisible. Сложность: видимость и движение отдельно задаются в CSS. */
-const Footer = document.querySelector(".SiteFooter");
+// const Footer = document.querySelector(".SiteFooter");
 
+const Footer = document.querySelector(".footer");
 function ShowFooterCow() {
   if (Footer.getBoundingClientRect().top < window.innerHeight) {
     Footer.classList.add("CowVisible");

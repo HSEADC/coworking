@@ -697,7 +697,7 @@
 
 /* Планшеты (портрет/альбом) и телефоны обычной ширины. */
 
-@media (max-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .ArticlePage {
     font-size: var(--small-font-size, 17px);
     line-height: 1.45;
@@ -940,5 +940,35 @@
 @media (max-width: 480px) {
   .FooterMoo {
     font-size: 40px;
+  }
+}
+
+/* Коровка только на десктопе */
+@media (min-width: 1025px) {
+  .SiteFooter {
+    position: relative;
+    overflow: visible;
+  }
+
+  .FooterCow {
+    display: block;
+    position: absolute;
+    right: 65px;
+    bottom: calc(100% - 28px);
+    width: 283px;
+    height: 154px;
+    overflow: hidden;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .FooterCow img {
+    display: block;
+    width: 100%;
+    transform: translateY(100%);
+  }
+
+  .SiteFooter.CowVisible .FooterCow img {
+    transform: translateY(0);
   }
 }
