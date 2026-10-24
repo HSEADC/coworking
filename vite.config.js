@@ -27,28 +27,21 @@ function pageChunksPlugin() {
     transformIndexHtml: {
       order: "pre",
       handler(html, ctx) {
-      // При сборке Vite включает JS статьи в готовый сайт.
-      if (!ctx.server) {
-        html = html.replace(
-          '<script defer src="../../javascript/article.js"></script>',
-          '<script type="module" src="../../javascript/article.js"></script>',
-        );
-      }
-      const relFile = path
-        .relative(root, ctx.filename)
-        .split(path.sep)
-        .join("/");
-      const chunks = chunksByFile[relFile];
-      if (!chunks) return html;
+        const relFile = path
+          .relative(root, ctx.filename)
+          .split(path.sep)
+          .join("/");
+        const chunks = chunksByFile[relFile];
+        if (!chunks) return html;
 
-      return {
-        html,
-        tags: chunks.map((src) => ({
-          tag: "script",
-          attrs: { type: "module", src },
-          injectTo: "body",
-        })),
-      };
+        return {
+          html,
+          tags: chunks.map((src) => ({
+            tag: "script",
+            attrs: { type: "module", src },
+            injectTo: "body",
+          })),
+        };
       },
     },
   };
@@ -56,7 +49,7 @@ function pageChunksPlugin() {
 
 export default defineConfig(({ command }) => ({
   root,
-  base: command === "build" ? "/coworking/" : "/",
+  base: command === "build" ? "" : "",
   plugins: [pageChunksPlugin()],
   build: {
     outDir,
